@@ -53,6 +53,7 @@
 
         <!-- Names the annotated entity class -->
         <mapping class="com.rain.dto.User"/>
+        <mapping class="com.rain.dto.UserRole"/>
 
     </session-factory>
 
