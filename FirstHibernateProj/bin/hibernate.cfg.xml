@@ -43,7 +43,9 @@
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
         <!-- Disable the second-level cache  -->
-        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+        <!--  --><property name="cache.use_query_cache">true</property>
+        <property name="cache.use_second_level_cache">true</property>
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
 
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
@@ -52,9 +54,34 @@
         <property name="hbm2ddl.auto">create</property>
 
         <!-- Names the annotated entity class -->
+        <!-- 
         <mapping class="com.rain.dto.User"/>
         <mapping class="com.rain.dto.UserRole"/>
-
+        <mapping class="com.rain.dto.Vehicle"/>
+        <mapping class="com.rain.dto.Persion"/>
+        <mapping class="com.rain.dto.Role"/>
+         -->
+         <!--  
+         <mapping class="com.rain.ineritance.dto.User"/>
+		<mapping class="com.rain.ineritance.dto.Vehicle"/>
+		<mapping class="com.rain.ineritance.dto.TwoWheeler"/>
+		<mapping class="com.rain.ineritance.dto.FourWheeler"/>
+         -->
+         <!-- 
+         <mapping class="com.rain.ineritance.per.dto.User"/>
+		<mapping class="com.rain.ineritance.per.dto.Vehicle"/>
+		<mapping class="com.rain.ineritance.per.dto.TwoWheeler"/>
+		<mapping class="com.rain.ineritance.per.dto.FourWheeler"/>
+          -->
+          <!-- 
+           <mapping class="com.rain.ineritance.join.dto.User"/>
+		<mapping class="com.rain.ineritance.join.dto.Vehicle"/>
+		<mapping class="com.rain.ineritance.join.dto.TwoWheeler"/>
+		<mapping class="com.rain.ineritance.join.dto.FourWheeler"/>
+           -->
+         <mapping class="com.rain.cache.dto.User"/>
+         <mapping class="com.rain.cache.dto.Vehicle"/>
+        
     </session-factory>
 
 </hibernate-configuration>
