@@ -1,0 +1,15 @@
+set autotrace on
+set linesize 1000
+set timing on
+
+set autotrace off
+set  autotraces traceonly
+
+INDEX RANGE SCAN
+INDEX UNIQUE SCAN
+TABLE ACCESS BY USER ROWID
+INDEX FULL SCAN
+INDEX FULL SCAN(MAX/MIN)
+INDEX FAST FULL SCAN
+SKIP SCAN SCAN
+TABLE ACCESS BY INDEX ROWID
