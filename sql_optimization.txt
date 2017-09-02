@@ -2,11 +2,20 @@ set autotrace on
 set linesize 1000
 set timing on
 
-
+dbs user has these permission
 alter session set statistics_level=all
+select * from table(dbms_xplan.display_cursor(null,null,'allstats last'));
 
 set autotrace off
 set  autotraces traceonly
+
+
+
+
+Oracle 表三种连接方式使用介绍
+nested loop：被连接的数据子集较小的情况
+HASH JOIN：做大数据集连接时的常用方式
+SORT MERGE JOIN：用在没有索引，并且数据已经排序的情况.
 
 INDEX RANGE SCAN
 INDEX UNIQUE SCAN
