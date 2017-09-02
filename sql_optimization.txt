@@ -2,6 +2,9 @@ set autotrace on
 set linesize 1000
 set timing on
 
+
+alter session set statistics_level=all
+
 set autotrace off
 set  autotraces traceonly
 
