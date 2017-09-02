@@ -9,6 +9,10 @@ select * from table(dbms_xplan.display_cursor(null,null,'allstats last'));
 set autotrace off
 set  autotraces traceonly
 
+set linesize 2000;
+alter session set statistics_level=all;
+select /*+ leading(t1) use_nl(t2)*/ * from t1 ,t2 where t1.t1_uuid = t2.t1_uuid and t1.age=19;
+select * from table(dbms_xplan.display_cursor(null,null,'allstats last'));
 
 
 
