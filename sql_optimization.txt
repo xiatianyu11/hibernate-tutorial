@@ -1,4 +1,4 @@
-set autotrace on
+﻿set autotrace on
 set linesize 1000
 set timing on
 
@@ -29,3 +29,6 @@ INDEX FULL SCAN(MAX/MIN)
 INDEX FAST FULL SCAN
 SKIP SCAN SCAN
 TABLE ACCESS BY INDEX ROWID
+
+
+http://www.cnblogs.com/tobecrazy/p/4564902.html
